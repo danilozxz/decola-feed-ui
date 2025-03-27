@@ -1,0 +1,17 @@
+<form class="border-t border-t-[#F7580F] mt-4 flex flex-col" (ngSubmit)="addComment()">
+    <strong class="text-[#F7580F] mt-2">Deixe seu feedback</strong>
+    <textarea
+      class="border-0 resize-none h-16 p-1 text-[#52525C] outline-0 bg-white mt-2 rounded-lg"
+      placeholder="Deixe um comentário"
+      [(ngModel)]="content"
+      name="content"
+    ></textarea>
+    <footer class="mt-2">
+      <button
+        type="submit"
+        class="cursor-pointer bg-[#F7580F] py-1 px-2 rounded-lg mt-2 text-white font-bold"
+      >
+        Comentar
+      </button>
+    </footer>
+</form>
