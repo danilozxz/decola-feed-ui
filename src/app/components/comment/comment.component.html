@@ -4,14 +4,14 @@
     <div>
       <header class="flex justify-between items-start">
         <div class="flex flex-col">
-            <strong class="text-[#F7580F]">Danilo Fernandes</strong>
-            <span class="text-[#F7580F]">36min</span>
+          <strong class="text-[#F7580F]">Danilo Fernandes</strong>
+          <span class="text-[#F7580F]">36min</span>
         </div>
-        <button class="cursor-pointer items-end">
-            ❌
+        <button class="cursor-pointer items-end" (click)="deleteComment(comment.id)">
+          ❌
         </button>
       </header>
-      <p class="mt-2">{{comment.content}}</p>
+      <p class="mt-2">{{ comment.content }}</p>
     </div>
   </div>
 </div>
