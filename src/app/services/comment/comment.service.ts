@@ -7,7 +7,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CommentService {
-  private apiUrl = 'http://localhost:8080/comments';
+  // private apiUrl = 'http://localhost:8080/comments';
+  private apiUrl = 'https://desafio-deploy-api-avanade-production.up.railway.app/comments';
+
 
   constructor(private http: HttpClient) {}
 

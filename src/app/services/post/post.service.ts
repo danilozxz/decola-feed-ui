@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostService {
-  private apiUrl = 'http://localhost:8080/posts';
+  // private apiUrl = 'http://localhost:8080/posts';
+  private apiUrl = 'https://desafio-deploy-api-avanade-production.up.railway.app/posts';
 
   constructor(private http: HttpClient) {}
 
