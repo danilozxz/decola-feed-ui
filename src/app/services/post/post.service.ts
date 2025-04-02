@@ -12,10 +12,10 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/list`);
+    return this.http.get<any[]>(`${this.apiUrl}`);
   }
 
   addPost(post: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/add`, post);
+    return this.http.post<any>(`${this.apiUrl}`, post);
   }
 }

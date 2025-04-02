@@ -14,17 +14,17 @@ export class CommentService {
   constructor(private http: HttpClient) {}
 
   getComments(): Observable<any> {
-    return this.http.get<any[]>(`${this.apiUrl}/list`)
+    return this.http.get<any[]>(`${this.apiUrl}`)
   }
 
   getCommentsByPostId(postId: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/list`).pipe(
+    return this.http.get<any[]>(`${this.apiUrl}`).pipe(
       map(comments => comments.filter(comment => comment.postId === postId))
     );
   }
 
   addComment(comment: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/add`, comment)
+    return this.http.post<any>(`${this.apiUrl}`, comment)
   }
 
   deleteComment(id: number): Observable<void> {
